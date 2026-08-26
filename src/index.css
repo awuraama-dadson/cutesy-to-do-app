@@ -2,6 +2,25 @@ body {
   background: linear-gradient(135deg, #fff9f5, #f8e8ed, #f6dfe9, #f3eaf2);
 }
 
+.name-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.input {
+  width: 10 rem;
+  height: 5 rem;
+  border-radius: 5px;
+}
+
+
 .header {
   height: 8rem;
   display: flex;
@@ -25,6 +44,7 @@ body {
   text-shadow: 2px 2px 4px gray;
   transition: transform 0.1s ease;
 }
+
 .header-divs:hover {
   transform: translateY(-1px);
 }
@@ -34,7 +54,7 @@ body {
   justify-content: center;
   height: 5rem;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
 .input {
@@ -88,8 +108,30 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+
+  .name-div {
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.input {
+  width: 8 rem;
+  height: 4 rem;
+  border-radius: 5px;
+}
+
+.save-btn {
+  background-color: #cfd8c4;
+  height: 10 rem;
+  margin-top: 15px;
+  width: 3rem;
+  border-radius: 5px;
+}
   .header {
-    height: 6rem;
+    height: 5rem;
     padding: 0.2rem;
   }
 

@@ -17,6 +17,9 @@ const Name = ({ name, setName, showNameDiv, addName }: NameProps) => {
             placeholder="I'd love to know🤍..."
             value={name}
             onChange={(e) => setName(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") addName();
+            }}
           />
           <button onClick={addName} className="save-btn">
             Save

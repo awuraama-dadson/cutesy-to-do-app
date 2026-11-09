@@ -12,7 +12,7 @@ const TaskList = ({tasks, toggleTask, deleteTask} : TaskListProps) => {
     <div className="task-list-div">
       <ul className="task-list">
       {tasks.map((task) =>
-      <TaskItem task={task} toggleTask={toggleTask} deleteTask = {deleteTask} />
+      <TaskItem key={task.id} task={task} toggleTask={toggleTask} deleteTask = {deleteTask} />
       )}
     </ul>
     </div>

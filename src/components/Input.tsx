@@ -16,6 +16,9 @@ const Input = ({ input, setInput, addTask , showInput}: InputProps) => {
             value={input}
             placeholder="Read a book💕..."
             onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") addTask();
+            }}
           />
           <div className="btn-div">
             <button className="btn" onClick={addTask}>

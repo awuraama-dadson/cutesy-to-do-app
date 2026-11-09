@@ -29,21 +29,20 @@ const App = () => {
       completed: false,
     };
 
-    setTasks([...tasks, newTask]);
-    console.log(tasks);
+    setTasks((prev) => [...prev, newTask]);
     setInput("");
   };
 
   const toggleTask = (id: number) => {
-    setTasks(
-      tasks.map((task) =>
+    setTasks((prev) =>
+      prev.map((task) =>
         task.id === id ? { ...task, completed: !task.completed } : task,
       ),
     );
   };
 
   const deleteTask = (id: number) => {
-    setTasks(tasks.filter((task) => task.id !== id));
+    setTasks((prev) => prev.filter((task) => task.id !== id));
   };
 
   return (
